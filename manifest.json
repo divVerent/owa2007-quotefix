@@ -1,0 +1,10 @@
+{
+	"name": "OWA 2007 quote fix",
+	"version": "1.0",
+	"description": "Fix quoting for OWA 2007",
+	"permissions" : [
+		"tabs",
+		"*://*/owa/"
+	],
+	"background_page": "background.html"
+}
