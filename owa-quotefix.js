@@ -26,11 +26,11 @@ function fixQuote(txt)
 	quote = quote + "\n";
 
 	// fix shorten the header
-	m = headers.match(/\nFrom: (.*?)\n/);
+	m = headers.match(/\n(?:From|Von): (.*?)\n/);
 	if(!m)
 		throw "no from";
 	var from = m[1];
-	m = headers.match(/\nSent: (.*?)\n/);
+	m = headers.match(/\n(?:Sent|Gesendet): (.*?)\n/);
 	if(!m)
 		throw "no sent";
 	var sent = m[1];
