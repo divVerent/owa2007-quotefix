@@ -22,8 +22,9 @@ function fixQuote(txt)
 
 	// fix quoting
 	quote = quote.replace(/\n*$/, "");
-	quote = quote.replace(/(^|\n)/g, "$1" + QUOTE_LEADER);
-	quote = quote + "\n";
+	quote = quote.replace(/^\n*/, "");
+	quote = quote.replace(/\n/g, "\n" + QUOTE_LEADER);
+	quote = QUOTE_LEADER + quote + "\n";
 
 	// fix shorten the header
 	m = headers.match(/\n(?:From|Von): (.*?)\n/);
